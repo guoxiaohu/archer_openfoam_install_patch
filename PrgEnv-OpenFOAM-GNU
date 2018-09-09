@@ -1,0 +1,31 @@
+#%Module2.0
+#
+# Local module for compiling/running OpenFOAM on ARCHER
+#
+# To use, run 'module swap PrgEnv-cray PrgEnv-OpenFOAM' after ensuring
+# the location of this file is in MODULEPATH
+#
+# Note that in addition to this module, anaconda libraries should be added to 
+# LD_LIBRARY_PATH with:
+#
+#  export LD_LIBRARY_PATH=$ANACONDA_LIB:$LD_LIBRARY_PATH 
+#
+# Please send any bug reports to Xiaohu Guo <xiaohu.guo@stfc.ac.uk>
+#
+#############################################################################
+
+conflict PrgEnv-cray
+conflict PrgEnv-intel
+
+#############################################################################
+# Modules to load
+
+module load PrgEnv-gnu
+
+module load zlib
+module load boost
+module load cgal
+module load cmake
+#setenv WM_64 "ON" 
+setenv CRAYPE_LINK_TYPE "dynamic" 
+#setenv CRAY_ADD_RPATH "yes"

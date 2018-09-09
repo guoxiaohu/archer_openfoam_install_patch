@@ -1,0 +1,21 @@
+diff --git a/etc/wmakeFiles/scotch/Makefile.inc.i686_pc_linux2.shlib-OpenFOAM b/etc/wmakeFiles/scotch/Makefile.inc.i686_pc_linux2.shlib-OpenFOAM
+index 1aefe9de..740d7c07 100644
+--- a/etc/wmakeFiles/scotch/Makefile.inc.i686_pc_linux2.shlib-OpenFOAM
++++ b/etc/wmakeFiles/scotch/Makefile.inc.i686_pc_linux2.shlib-OpenFOAM
+@@ -3,12 +3,12 @@ LIB		= .so
+ OBJ		= .o
+ 
+ MAKE		= make
+-AR		= gcc
++AR		= cc
+ ARFLAGS		= $(WM_CFLAGS) -shared -o
+ CAT		= cat
+-CCS		= gcc
+-CCP		= mpicc
+-CCD		= mpicc
++CCS		= cc
++CCP		= cc
++CCD		= cc
+ CFLAGS		= $(WM_CFLAGS) -O3 -DCOMMON_FILE_COMPRESS_GZ -DCOMMON_RANDOM_FIXED_SEED -DSCOTCH_RENAME -Drestrict=__restrict
+ 
+ ifeq ($(WM_LABEL_OPTION),Int64)
